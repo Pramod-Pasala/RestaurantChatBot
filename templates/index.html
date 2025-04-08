@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyderabadi Restaurant</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital@1&display=swap">
+    <link rel="stylesheet" href="{{ url_for('static',path='styles.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',path='images/hr_logo.jpg') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Hyderabadi Restaurant</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Experience Authentic</h1>
+        <h2>Hyderabadi Cuisine</h2>
+        <p>Savor the royal flavors of Hyderabad with our traditional recipes passed down through generations.</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/HyderabadiBiryani.jpg') }}" alt="Biryani">
+                <h3>Hyderabadi Biryani</h3>
+                <p>9€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/Haleem.jpg') }}" alt="Haleem">
+                <h3>Haleem</h3>
+                <p>8€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/MirchiKaSalan.jpg') }}" alt="Mirchi Ka Salan">
+                <h3>Mirchi Ka Salan</h3>
+                <p>5€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/DoubleKaMeetha.jpg') }}" alt="Double Ka Meetha">
+                <h3>Double Ka Meetha</h3>
+                <p>4€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/Chai.jpg') }}" alt="Chai">
+                <h3>Chai</h3>
+                <p>3€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/OsmaniaBiscuits.jpg') }}" alt="Osmania Biscuits">
+                <h3>Osmania Biscuits</h3>
+                <p>2€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/BagaraBaingan.jpg') }}" alt="Bagara Baingan">
+                <h3>Bagara Baingan</h3>
+                <p>5€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/PattharKaGosht.jpg') }}" alt="Patthar Ka Gosht">
+                <h3>Patthar Ka Gosht</h3>
+                <p>7€</p>
+            </div>
+            <div class="menu-item">
+                <img src="{{ url_for('static',path='images/Jalebi.jpg') }}" alt="Jalebi">
+                <h3>Jalebi</h3>
+                <p>4€</p>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Hyderabadi Restaurant, we bring you the authentic taste of Hyderabadi cuisine, crafted with love and tradition. Our recipes are a celebration of the rich culinary heritage of Hyderabad, passed down through generations, ensuring every dish is a royal experience.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@hyderabadi.com</p>
+        <p>Phone: +91 09976 73201</p>
+        <p>Address: 101, Charminar Road, Hyderabad, Telangana, India</p>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+    
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="viji-chat"
+      agent-id="51dc7736-7d95-4579-b9ee-94d4fceb2c93"
+      language-code="en"
+    ></df-messenger>
+</body>
+</html>
